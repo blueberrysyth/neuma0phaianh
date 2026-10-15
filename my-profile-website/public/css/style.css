@@ -3,6 +3,10 @@
  *  Đổi màu trong public/js/config.js (theme.light / theme.dark)
  *  hoặc sửa thẳng các biến dưới đây.
  * ============================================================ */
+/* ============================================================
+ *  THEME MỚI — Butterscotch / Rose Madder / Light Navy (sáng)
+ *            Dark Grey Blue / Faded Orange / Bashful Pink (tối)
+ * ============================================================ */
 :root {
   /* ----- BẢNG MÀU GỐC (lấy từ ảnh) ----- */
   --butterscotch: #fcb34f;   /* sáng: vàng bơ */
@@ -892,163 +896,124 @@ textarea.field { resize: vertical; min-height: 130px; line-height: 1.6; }
  *  Màu gốc được khai báo trong public/js/config.js.
  *  Đặt cuối style.css; không sửa logic JS, hiệu ứng lật sách.
  * ============================================================ */
-
-/* Bảng pastel: 3E668F · 81A9EE · AAB4E7 · FFDB83 · FFF2D0 */
+/* ============================================================
+ *  THEME MỚI — Butterscotch / Rose Madder / Light Navy (sáng)
+ *            Dark Grey Blue / Faded Orange / Bashful Pink (tối)
+ * ============================================================ */
 :root[data-theme="light"] {
-  --on-leather: #FFF2D0;
-  --cover: #7495C7;
-  --overlay: rgba(35, 57, 91, 0.60);
-  --gold-soft: rgba(62, 102, 143, 0.22);
-  --gold-faint: rgba(62, 102, 143, 0.12);
-  --accent-soft: rgba(129, 169, 238, 0.20);
-  --paper-grain: none;
-  --leather-grain: none;
+  --leather: #1f6590;
+  --glow: #4a8bb5;
+  --paper: #fdd59e;
+  --paper-2: #fcb34f;
+  --ink: #103348;
+  --muted: #1f6590;
+  --accent: #e62a34;
+  --accent-2: #1f6590;
+  --gold: #d9702f;
+  --on-accent: #fff3dc;
+  --on-accent-2: #fcb34f;
+  --on-leather: #fcb34f;
+  --cover: #1a5578;
+  --overlay: rgba(10, 40, 60, 0.65);
+  --gold-soft: rgba(217, 112, 47, 0.40);
+  --gold-faint: rgba(217, 112, 47, 0.20);
+  --accent-soft: rgba(230, 42, 52, 0.14);
   color-scheme: light;
 }
-
-/* Nền trời xanh, lavender và chút ánh vàng như ảnh tham khảo. */
 :root[data-theme="light"] .bg .lamp {
   background:
-    radial-gradient(ellipse 68% 56% at 18% 4%, rgba(170, 180, 231, 0.80), transparent 78%),
-    radial-gradient(ellipse 60% 52% at 86% 84%, rgba(255, 219, 131, 0.35), transparent 75%),
-    linear-gradient(145deg, #3E668F 0%, #81A9EE 50%, #AAB4E7 100%);
-  opacity: 0.90;
-}
-:root[data-theme="light"] .bg .vignette {
-  background: radial-gradient(ellipse 85% 85% at 50% 48%, transparent 54%, rgba(62, 102, 143, 0.18) 100%);
+    radial-gradient(ellipse 60% 50% at 18% 4%, rgba(252, 179, 79, 0.45), transparent 75%),
+    radial-gradient(ellipse 55% 50% at 86% 86%, rgba(230, 42, 52, 0.25), transparent 75%),
+    linear-gradient(145deg, #174f72 0%, #1f6590 55%, #2b7aa8 100%);
+  opacity: 0.95;
 }
 :root[data-theme="light"] .card {
-  background: linear-gradient(145deg, #3E668F 0%, #81A9EE 52%, #AAB4E7 100%);
-  border: 1px solid rgba(255, 242, 208, 0.45);
-  box-shadow: 0 24px 65px rgba(20, 48, 83, 0.32);
+  background: linear-gradient(145deg, #1a5578 0%, #1f6590 55%, #2b7aa8 100%);
+  border: 1px solid rgba(252, 179, 79, 0.45);
+  box-shadow: 0 24px 65px rgba(8, 30, 48, 0.4);
 }
-:root[data-theme="light"] .sheet {
-  background: linear-gradient(150deg, #FFF2D0 0%, #FFF2D0 74%, #F4EAD7 100%);
-  box-shadow: inset 0 0 40px rgba(129, 169, 238, 0.09),
-              2px 2px 0 #AAB4E7, 4px 4px 0 #AAB4E7,
-              0 12px 28px rgba(30, 56, 94, 0.20);
-}
-:root[data-theme="light"] .frame {
-  border-color: color-mix(in srgb, #3E668F 40%, #FFDB83);
-  outline-color: rgba(62, 102, 143, 0.16);
-}
-:root[data-theme="light"] .frame i { color: #3E668F; }
-:root[data-theme="light"] .rule,
-:root[data-theme="light"] .welcome-box .greeting { color: #3E668F; }
-:root[data-theme="light"] .rule::before,
-:root[data-theme="light"] .rule::after { background: #FFDB83; }
 :root[data-theme="light"] .player {
-  background: linear-gradient(115deg, #E5E6F0 0%, #DBDEF0 55%, #FCE9BD 100%);
-  border-color: rgba(62, 102, 143, 0.35);
-  box-shadow: inset 0 0 0 3px rgba(255, 242, 208, 0.42);
+  background: linear-gradient(115deg, #fcb34f 0%, #fdc577 100%);
+  border-color: rgba(31, 101, 144, 0.45);
 }
 :root[data-theme="light"] .btn-primary,
 :root[data-theme="light"] .icon-btn.play {
-  background: linear-gradient(110deg, #81A9EE 0%, #FFDB83 100%);
-  color: #203E64;
+  background: var(--accent);
+  color: var(--on-accent);
 }
 :root[data-theme="light"] .btn-primary:hover:not(:disabled),
-:root[data-theme="light"] .icon-btn.play:hover {
-  background: linear-gradient(110deg, #719CE4 0%, #F7CE70 100%);
-  color: #203E64;
-}
+:root[data-theme="light"] .icon-btn.play:hover { background: #c81f29; }
 :root[data-theme="light"] .letter-btn,
 :root[data-theme="light"] .ribbon {
-  background: linear-gradient(165deg, #3E668F 0%, #AAB4E7 100%);
-  color: #FFF2D0;
+  background: linear-gradient(165deg, #1f6590 0%, #174f72 100%);
+  color: #fcb34f;
 }
-:root[data-theme="light"] .letter-btn:hover:not(:disabled) {
-  background: linear-gradient(115deg, #3E668F 0%, #81A9EE 100%);
-  color: #FFF2D0;
-}
+:root[data-theme="light"] .letter-btn:hover:not(:disabled) { background: #2b7aa8; color: #fcb34f; }
 :root[data-theme="light"] .badge,
-:root[data-theme="light"] .theme-toggle {
-  color: #3E668F;
-}
-:root[data-theme="light"] .badge { background: #FFDB83; }
+:root[data-theme="light"] .theme-toggle { color: #1f6590; }
+:root[data-theme="light"] .badge { background: #fcb34f; }
+:root[data-theme="light"] .theme-toggle { background: #fcb34f; border-color: #fff3dc; }
 :root[data-theme="light"] .avatar-wrap img,
 :root[data-theme="light"] .welcome-gif { filter: none; }
 
-/* Bảng sứa: BEDAF3 · 5598D3 · 2674BC · 0A3976 · 041124 */
 :root[data-theme="dark"] {
-  --on-leather: #BEDAF3;
-  --cover: #082957;
-  --overlay: rgba(4, 17, 36, 0.82);
-  --gold-soft: rgba(85, 152, 211, 0.38);
-  --gold-faint: rgba(85, 152, 211, 0.17);
-  --accent-soft: rgba(38, 116, 188, 0.24);
-  --paper-grain: none;
-  --leather-grain: none;
+  --leather: #16242e;
+  --glow: #305166;
+  --paper: #233a49;
+  --paper-2: #305166;
+  --ink: #eeba88;
+  --muted: #d9a374;
+  --accent: #b25781;
+  --accent-2: #e79d56;
+  --gold: #c98a52;
+  --on-accent: #fff3e6;
+  --on-accent-2: #1b2d3a;
+  --on-leather: #eeba88;
+  --cover: #1e3342;
+  --overlay: rgba(8, 15, 20, 0.8);
+  --gold-soft: rgba(231, 157, 86, 0.38);
+  --gold-faint: rgba(231, 157, 86, 0.17);
+  --accent-soft: rgba(178, 87, 129, 0.22);
   color-scheme: dark;
 }
-
-/* Quầng sáng xanh dưới biển, không dùng màu đỏ/nâu. */
 :root[data-theme="dark"] .bg .lamp {
   background:
-    radial-gradient(ellipse 49% 43% at 60% 19%, rgba(85, 152, 211, 0.31), transparent 76%),
-    radial-gradient(ellipse 37% 38% at 13% 83%, rgba(38, 116, 188, 0.22), transparent 75%),
-    radial-gradient(ellipse 42% 48% at 95% 75%, rgba(10, 57, 118, 0.65), transparent 79%),
-    linear-gradient(145deg, #041124 10%, #071F43 55%, #041124 100%);
+    radial-gradient(ellipse 50% 45% at 60% 18%, rgba(48, 81, 102, 0.65), transparent 76%),
+    radial-gradient(ellipse 40% 40% at 12% 84%, rgba(178, 87, 129, 0.22), transparent 75%),
+    linear-gradient(145deg, #111c24 10%, #16242e 55%, #0e171e 100%);
   opacity: 1;
 }
-:root[data-theme="dark"] .bg .vignette {
-  background: radial-gradient(ellipse 77% 72% at 50% 44%, transparent 49%, rgba(2, 9, 22, 0.42) 100%);
-}
 :root[data-theme="dark"] .card {
-  background: linear-gradient(150deg, #0A3976 0%, #082A57 50%, #041124 100%);
-  border: 1px solid rgba(85, 152, 211, 0.56);
-  box-shadow: 0 0 34px rgba(38, 116, 188, 0.25),
-              0 24px 70px rgba(0, 7, 22, 0.66);
+  background: linear-gradient(150deg, #243d4d 0%, #1e3342 50%, #16242e 100%);
+  border: 1px solid rgba(231, 157, 86, 0.45);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6);
 }
-:root[data-theme="dark"] .sheet {
-  background: linear-gradient(160deg, #0A3976 0%, #092F63 57%, #071F45 100%);
-  box-shadow: inset 0 0 45px rgba(4, 17, 36, 0.36),
-              2px 2px 0 #2674BC, 4px 4px 0 #0A3976,
-              0 12px 35px rgba(0, 8, 24, 0.48);
-}
-:root[data-theme="dark"] .frame {
-  border-color: rgba(85, 152, 211, 0.72);
-  outline-color: rgba(190, 218, 243, 0.15);
-}
-:root[data-theme="dark"] .frame i { color: #BEDAF3; }
 :root[data-theme="dark"] .player {
-  background: linear-gradient(135deg, #041124 0%, #082653 100%);
-  border-color: #2674BC;
-  box-shadow: inset 0 0 0 2px rgba(85, 152, 211, 0.13),
-              0 0 22px rgba(38, 116, 188, 0.18);
+  background: linear-gradient(135deg, #1b2d3a 0%, #305166 100%);
+  border-color: #c98a52;
 }
 :root[data-theme="dark"] .btn-primary,
 :root[data-theme="dark"] .icon-btn.play {
-  background: linear-gradient(110deg, #2674BC, #5598D3);
-  color: #FFFFFF;
+  background: var(--accent);
+  color: var(--on-accent);
 }
 :root[data-theme="dark"] .btn-primary:hover:not(:disabled),
-:root[data-theme="dark"] .icon-btn.play:hover {
-  background: linear-gradient(110deg, #0A3976, #2674BC);
-  color: #BEDAF3;
-}
+:root[data-theme="dark"] .icon-btn.play:hover { background: #964669; }
 :root[data-theme="dark"] .letter-btn,
 :root[data-theme="dark"] .ribbon {
-  background: linear-gradient(155deg, #0A3976, #2674BC 65%, #5598D3);
-  color: #BEDAF3;
+  background: linear-gradient(155deg, #e79d56, #c98a52);
+  color: #1b2d3a;
 }
-:root[data-theme="dark"] .letter-btn:hover:not(:disabled) {
-  background: linear-gradient(110deg, #2674BC, #5598D3);
-  color: #041124;
-}
+:root[data-theme="dark"] .letter-btn:hover:not(:disabled) { background: #f0ac6c; color: #1b2d3a; }
 :root[data-theme="dark"] .theme-toggle {
-  background: #5598D3;
-  color: #041124;
-  border-color: #BEDAF3;
-  box-shadow: 0 0 0 1px #2674BC, 0 0 18px rgba(85, 152, 211, 0.33);
+  background: #e79d56;
+  color: #1b2d3a;
+  border-color: #fff3e6;
 }
-:root[data-theme="dark"] .badge,
-:root[data-theme="dark"] .welcome-box .greeting { color: #041124; }
-:root[data-theme="dark"] .welcome-box .greeting { color: #BEDAF3; }
-:root[data-theme="dark"] .badge { background: #BEDAF3; }
+:root[data-theme="dark"] .badge { background: #e79d56; color: #1b2d3a; }
+:root[data-theme="dark"] .welcome-box .greeting { color: #eeba88; }
 :root[data-theme="dark"] .avatar-wrap img,
 :root[data-theme="dark"] .welcome-gif { filter: none; }
-
 /* Giảm chuyển động nếu người xem đã chọn chế độ này. */
 @media (prefers-reduced-motion: reduce) {
   :root[data-theme="light"] .card,
