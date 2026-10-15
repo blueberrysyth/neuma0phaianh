@@ -4,19 +4,27 @@
  *  hoặc sửa thẳng các biến dưới đây.
  * ============================================================ */
 :root {
-  /* ----- CHẾ ĐỘ SÁNG: bảng màu "Coffee / Maroon / Clay Dust / Creme / Leather Couch / Deep Peach / Guave / River Pine" ----- */
-  --leather: #371e13;    /* nền trang web: da nâu (Coffee) */
-  --glow: #734f31;       /* ánh đèn hắt lên da (Leather Couch) */
-  --paper: #e1d3a9;      /* trang giấy (Creme) */
-  --paper-2: #c0aa8a;    /* ô player, ô nhập (Clay Dust) */
-  --ink: #371e13;        /* chữ (Coffee) */
-  --muted: #534b31;      /* chữ phụ (River Pine) */
-  --accent: #a85530;     /* nút chính, thanh nhạc (Deep Peach) */
-  --accent-2: #5e2a25;   /* ruy băng, nút gửi thư (Maroon) */
-  --gold: #8f7c3a;       /* khung kẻ, hoa văn (Guave) */
-  --on-accent: #f3e9cf;  /* chữ trên nút màu */
-  --on-accent-2: #f3e9cf;
-  --on-leather: var(--paper); /* chữ đặt thẳng trên nền da (chân trang) */
+  /* ----- BẢNG MÀU GỐC (lấy từ ảnh) ----- */
+  --butterscotch: #fcb34f;   /* sáng: vàng bơ */
+  --rose-madder: #e62a34;    /* sáng: đỏ hồng */
+  --light-navy: #1f6590;     /* sáng: xanh navy nhạt */
+  --dark-grey-blue: #305166; /* tối: xanh xám đậm */
+  --faded-orange: #e79d56;   /* tối: cam phai */
+  --bashful-pink: #b25781;   /* tối: hồng e thẹn */
+
+  /* ----- CHẾ ĐỘ SÁNG: Butterscotch / Rose Madder / Light Navy Blue ----- */
+  --leather: #1f6590;    /* nền trang web: Light Navy Blue */
+  --glow: color-mix(in srgb, var(--light-navy) 70%, white); /* ánh sáng hắt lên nền */
+  --paper: color-mix(in srgb, var(--butterscotch) 55%, white); /* trang giấy: bơ nhạt */
+  --paper-2: #fcb34f;    /* ô player, ô nhập: Butterscotch */
+  --ink: color-mix(in srgb, var(--light-navy) 50%, black);     /* chữ: navy đậm, dễ đọc trên nền bơ */
+  --muted: #1f6590;      /* chữ phụ: Light Navy Blue */
+  --accent: #e62a34;     /* nút chính, thanh nhạc: Rose Madder */
+  --accent-2: #1f6590;   /* ruy băng, nút gửi thư: Light Navy Blue */
+  --gold: color-mix(in srgb, var(--butterscotch) 55%, var(--rose-madder)); /* khung kẻ, hoa văn: cam đỏ */
+  --on-accent: #fff3dc;  /* chữ trên nút đỏ */
+  --on-accent-2: #fcb34f;/* chữ trên nút navy: Butterscotch */
+  --on-leather: var(--butterscotch); /* chữ đặt thẳng trên nền navy (chân trang) */
 
   /* màu pha tự tính */
   --cover: color-mix(in srgb, var(--leather) 58%, var(--glow));          /* bìa sách */
@@ -26,34 +34,33 @@
   --ink-20: color-mix(in srgb, var(--ink) 20%, transparent);
   --accent-soft: color-mix(in srgb, var(--accent) 16%, transparent);
   --overlay: color-mix(in srgb, var(--leather) 72%, transparent);
-  --paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.2  0 0 0 0 0.12  0 0 0 0 0.05  0 0 0 0.16 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  --leather-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 0.85  0 0 0 0 0.6  0 0 0 0.11 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.12  0 0 0 0 0.25  0 0 0 0 0.35  0 0 0 0.12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --leather-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 0.8  0 0 0 0 0.5  0 0 0 0.11 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   color-scheme: light;
 
   --font-display: "Playfair Display", "DejaVu Serif", Georgia, "Times New Roman", serif;
   --font-body: "Lora", "DejaVu Serif", Georgia, "Times New Roman", serif;
 }
 
-/* ----- CHẾ ĐỘ TỐI: bảng màu "B72D29 / 57645B / 2A0D12 / 2A2E2F / 170F12" ----- */
+/* ----- CHẾ ĐỘ TỐI: Dark Grey Blue / Faded Orange / Bashful Pink ----- */
 :root[data-theme="dark"] {
-  --leather: #170f12;    /* nền: đen ánh rượu */
-  --glow: #2a0d12;       /* ánh nến */
-  --paper: #2a2e2f;      /* trang giấy than */
-  --paper-2: #2a0d12;    /* ô player: rượu vang đậm */
-  --ink: #e8dfd0;        /* chữ: xương ngà */
-  --muted: #a7ada6;      /* chữ phụ: xám xanh nhạt */
-  --accent: #b72d29;     /* nút chính: đỏ máu */
-  --accent-2: #57645b;   /* ruy băng, nút gửi thư: xanh xám */
-  --gold: #a08447;       /* khung kẻ: đồng mờ */
-  --on-accent: #f3e9cf;
-  --on-accent-2: #f3e9cf;
+  --leather: color-mix(in srgb, var(--dark-grey-blue) 45%, black); /* nền: xanh xám rất đậm */
+  --glow: #305166;       /* ánh sáng hắt lên: Dark Grey Blue */
+  --paper: color-mix(in srgb, var(--dark-grey-blue) 72%, black);   /* trang giấy: xanh than */
+  --paper-2: #305166;    /* ô player, ô nhập: Dark Grey Blue */
+  --ink: color-mix(in srgb, var(--faded-orange) 70%, white);       /* chữ: cam nhạt, dễ đọc */
+  --muted: color-mix(in srgb, var(--faded-orange) 60%, var(--ink));/* chữ phụ: cam phai */
+  --accent: #b25781;     /* nút chính, thanh nhạc: Bashful Pink */
+  --accent-2: #e79d56;   /* ruy băng, nút gửi thư: Faded Orange */
+  --gold: color-mix(in srgb, var(--faded-orange) 85%, var(--leather)); /* khung kẻ: cam dịu */
+  --on-accent: #fff3e6;  /* chữ trên nút hồng */
+  --on-accent-2: #1b2d3a;/* chữ trên nút cam: xanh đậm (giống ảnh mẫu) */
   --on-leather: var(--ink);
   --cover: color-mix(in srgb, var(--leather) 45%, var(--glow));
-  --overlay: rgba(10, 6, 8, 0.72);
-  --paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 0.95  0 0 0 0 0.85  0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --overlay: rgba(11, 20, 26, 0.72);
+  --paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 0.85  0 0 0 0 0.7  0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   color-scheme: dark;
 }
-
 /* ============================================================
  *  CƠ BẢN
  * ============================================================ */
