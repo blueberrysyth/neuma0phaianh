@@ -45,11 +45,11 @@ window.SITE_CONFIG = {
   },
 
   /* ---------- 2. THÔNG TIN CÁ NHÂN ---------- */
-  name: "Julieta",                          // Tên hiển thị
-  username: "@_doanan._",                      // Hiện ở chân trang
-  pageTitle: "An ✦ profile",            // Tiêu đề tab trình duyệt
+  name: "Bích Huệ",                          // Tên hiển thị
+  username: "@blueberry.syth",                      // Hiện ở chân trang
+  pageTitle: "Xanh Lam",            // Tiêu đề tab trình duyệt
   ribbon: "       ",                      // Chữ trên ruy băng đánh dấu trang ("" để ẩn ruy băng)
-  bio: "Xin chào, mình là An. Cảm ơn bạn đã ghé thăm.",
+  bio: "Xin chào, mình là Lam. Cảm ơn bạn đã ghé thăm.",
   bioTypingEffect: true,                   // Hiệu ứng gõ chữ cho bio (false = hiện luôn)
   avatar: "assets/avatar.png",             // 👉 Thay bằng ảnh của bạn: để file vào public/assets/ rồi đổi tên ở đây, VD "assets/avatar.jpg"
   verified: true,                          // Tick xác minh cạnh tên
@@ -63,9 +63,8 @@ window.SITE_CONFIG = {
    *  Muốn icon khác (VD Zalo): mở https://tabler.io/icons → copy SVG → dán thành <symbol> mới trong sprite.svg (xem README).
    *  Xoá / thêm dòng tuỳ ý. Để url rỗng "" thì icon sẽ không hiện. */
   socials: [
-    { name: "Facebook",  icon: "brand-facebook",  url: "https://www.facebook.com/doaqn.an" },
-    { name: "Instagram", icon: "brand-instagram", url: "https://www.instagram.com/_doanan._/" },
-    { name: "Instagram", icon: "brand-instagram", url: "https://www.instagram.com/anndoannspam/" },
+    { name: "Facebook",  icon: "brand-facebook",  url: "https://www.facebook.com/bichhueowo/" },
+    { name: "Instagram", icon: "brand-instagram", url: "https://www.instagram.com/w.bhue8/" },
   ],
 
   /* ---------- 4. POPUP CHÀO MỪNG (hiện khi mới vào trang) ---------- */
@@ -209,21 +208,21 @@ window.SITE_CONFIG = {
    *  messages: câu nói ngẫu nhiên (tối đa 30 câu, mỗi câu tối đa 120 ký tự); {name} = tên linh vật. */
   mascot: {
     enabled: true,          // false = ẩn linh vật
-    name: "Bé Mực",
+    name: "sứa",
     color: "#d97757",       // Màu thân (dạng #rrggbb)
     messages: [
-      "Chào bạn! Mình là {name} nè 👋",
-      "Kéo mép sách để lật trang nè ✦",
+      "In the game, baby, I'm lit",
+      "Xanh rồi đen, rồi lục, lam, chàm, tím",
       "Đừng quên gửi thư cho chủ nhà nha 💌",
-      "Trang sau còn nhiều điều hay lắm đó!",
-      "Bấm vào ảnh trong sách để xem to hơn nha",
+      "Đừng săm soi chuyện đời tư của bố mày!",
+      "Tất cả kịch bản đã được biên hết rồi",
       "Bài này nghe cuốn ghê, bạn thấy sao? 🎵",
-      "Nhớ uống nước nha, {name} canh đó 💧",
+      "Tim anh như đang nổ tung nhưng mà lại chẳng biết nói gì với em",
       "Nhấc mình lên rồi thả xuống thử xem, hihi",
       "Hôm nay của bạn thế nào rồi?",
-      "Phím ← → trên bàn phím cũng lật được trang đó",
+      "Ngắm nhìn cảnh sắc đan xen trăng tròn khoảnh khắc ban đêm",
       "Muốn đổi bài thì bấm “Đổi nhạc” ở trang 2 nha",
-      "Thử bật chế độ tối ở góc trên bên phải xem ✨",
+      "Nếu còn là bạn, Hãy nói xin chào",
       "Mình hơi buồn ngủ… nhưng vẫn ráng chơi với bạn",
       "Chúc bạn một ngày thật nhẹ nhàng 🌷",
     ],
