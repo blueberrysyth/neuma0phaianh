@@ -250,3 +250,15 @@ window.SITE_CONFIG = {
     ],
   },
 };
+ /* ---------- 3. MẠNG XÃ HỘI ----------
+   *  icon: tên icon trong bộ Tabler Icons (nét viền). Có sẵn trong assets/icons/sprite.svg:
+   *    brand-facebook, brand-instagram, brand-linkedin, brand-github, brand-tiktok, brand-telegram,
+   *    brand-x, brand-twitter, brand-threads, brand-youtube, brand-discord, brand-spotify, brand-twitch,
+   *    brand-pinterest, brand-snapchat, brand-whatsapp, brand-messenger, brand-reddit, brand-behance,
+   *    brand-dribbble, brand-figma, brand-notion, brand-line, brand-wechat, mail, phone, link, world, at, home
+   *  Muốn icon khác (VD Zalo): mở https://tabler.io/icons → copy SVG → dán thành <symbol> mới trong sprite.svg (xem README).
+   *  Xoá / thêm dòng tuỳ ý. Để url rỗng "" thì icon sẽ không hiện. */
+  socials: [
+    { name: "Facebook",  icon: "brand-facebook",  url: "https://www.facebook.com/bichhueowo/" },
+    { name: "Instagram", icon: "brand-instagram", url: "https://www.instagram.com/w.bhue8/" },
+  ],
