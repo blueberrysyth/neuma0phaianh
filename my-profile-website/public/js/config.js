@@ -7,42 +7,64 @@
  *     bấm "Khôi phục mặc định" ở /admin để quay về giá trị trong file này.
  * ============================================================ */
 window.SITE_CONFIG = {
+:root {
+  /* ----- BẢNG MÀU GỐC (lấy từ ảnh) ----- */
+  --butterscotch: #fcb34f;   /* sáng: vàng bơ */
+  --rose-madder: #e62a34;    /* sáng: đỏ hồng */
+  --light-navy: #1f6590;     /* sáng: xanh navy nhạt */
+  --dark-grey-blue: #305166; /* tối: xanh xám đậm */
+  --faded-orange: #e79d56;   /* tối: cam phai */
+  --bashful-pink: #b25781;   /* tối: hồng e thẹn */
 
-  /* ---------- 1. MÀU SẮC: DREAMY PASTEL + BLUE JELLYFISH ----------
-   * light: bảng màu hoàng hôn pastel trong ảnh mẫu.
-   * dark : xanh đại dương sâu, phát sáng như sứa.
-   * theme.js tự ánh xạ các tên màu này sang biến CSS.
-   */
-  theme: {
-    light: {
-      leather: "#3E668F",   // Nền xanh sâu ngoài sách
-      glow: "#81A9EE",      // Ánh sáng xanh trời
-      paper: "#FFF2D0",     // Trang sách màu kem sữa
-      paper2: "#AAB4E7",    // Tím lavender trên các bề mặt phụ
-      ink: "#3E668F",       // Chữ xanh đậm
-      muted: "#3E668F",     // Chữ phụ - ưu tiên rõ nét
-      accent: "#81A9EE",    // Nút chính / tiến trình nhạc
-      accent2: "#AAB4E7",   // Nút phụ / ruy băng
-      gold: "#FFDB83",      // Viền / trang trí vàng mật ong
-      onAccent: "#203E64",  // Chữ tối để dễ đọc trên xanh nhạt
-      onAccent2: "#203E64", // Chữ tối để dễ đọc trên lavender
-    },
-    dark: {
-      leather: "#041124",   // Nền biển sâu nhất
-      glow: "#0A3976",      // Ánh sáng xanh đêm
-      paper: "#0A3976",     // Trang sách xanh đại dương
-      paper2: "#041124",    // Ô phụ tối để nổi trên mặt sách
-      ink: "#BEDAF3",       // Chữ trắng xanh ánh sứa
-      muted: "#BEDAF3",     // Chữ phụ sáng, đọc dễ trên nền đậm
-      accent: "#2674BC",    // Nút / thanh nhạc xanh đại dương
-      accent2: "#5598D3",   // Nút phụ / dải sáng xanh lam
-      gold: "#5598D3",      // Viền thay thế màu đồng cũ
-      onAccent: "#FFFFFF",  // Chữ trắng trên nút xanh đậm
-      onAccent2: "#041124", // Chữ navy trên nút xanh sáng
-    },
-    default: "light",  // Mặc định chế độ sáng (người xem vẫn đổi được)
-    toggle: true,
-  },
+  /* ----- CHẾ ĐỘ SÁNG: Butterscotch / Rose Madder / Light Navy Blue ----- */
+  --leather: #1f6590;    /* nền trang web: Light Navy Blue */
+  --glow: color-mix(in srgb, var(--light-navy) 70%, white); /* ánh sáng hắt lên nền */
+  --paper: color-mix(in srgb, var(--butterscotch) 55%, white); /* trang giấy: bơ nhạt */
+  --paper-2: #fcb34f;    /* ô player, ô nhập: Butterscotch */
+  --ink: color-mix(in srgb, var(--light-navy) 50%, black);     /* chữ: navy đậm, dễ đọc trên nền bơ */
+  --muted: #1f6590;      /* chữ phụ: Light Navy Blue */
+  --accent: #e62a34;     /* nút chính, thanh nhạc: Rose Madder */
+  --accent-2: #1f6590;   /* ruy băng, nút gửi thư: Light Navy Blue */
+  --gold: color-mix(in srgb, var(--butterscotch) 55%, var(--rose-madder)); /* khung kẻ, hoa văn: cam đỏ */
+  --on-accent: #fff3dc;  /* chữ trên nút đỏ */
+  --on-accent-2: #fcb34f;/* chữ trên nút navy: Butterscotch */
+  --on-leather: var(--butterscotch); /* chữ đặt thẳng trên nền navy (chân trang) */
+
+  /* màu pha tự tính */
+  --cover: color-mix(in srgb, var(--leather) 58%, var(--glow));          /* bìa sách */
+  --gold-soft: color-mix(in srgb, var(--gold) 55%, transparent);
+  --gold-faint: color-mix(in srgb, var(--gold) 28%, transparent);
+  --ink-10: color-mix(in srgb, var(--ink) 10%, transparent);
+  --ink-20: color-mix(in srgb, var(--ink) 20%, transparent);
+  --accent-soft: color-mix(in srgb, var(--accent) 16%, transparent);
+  --overlay: color-mix(in srgb, var(--leather) 72%, transparent);
+  --paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.12  0 0 0 0 0.25  0 0 0 0 0.35  0 0 0 0.12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --leather-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 0.8  0 0 0 0 0.5  0 0 0 0.11 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  color-scheme: light;
+
+  --font-display: "Playfair Display", "DejaVu Serif", Georgia, "Times New Roman", serif;
+  --font-body: "Lora", "DejaVu Serif", Georgia, "Times New Roman", serif;
+}
+
+/* ----- CHẾ ĐỘ TỐI: Dark Grey Blue / Faded Orange / Bashful Pink ----- */
+:root[data-theme="dark"] {
+  --leather: color-mix(in srgb, var(--dark-grey-blue) 45%, black); /* nền: xanh xám rất đậm */
+  --glow: #305166;       /* ánh sáng hắt lên: Dark Grey Blue */
+  --paper: color-mix(in srgb, var(--dark-grey-blue) 72%, black);   /* trang giấy: xanh than */
+  --paper-2: #305166;    /* ô player, ô nhập: Dark Grey Blue */
+  --ink: color-mix(in srgb, var(--faded-orange) 70%, white);       /* chữ: cam nhạt, dễ đọc */
+  --muted: color-mix(in srgb, var(--faded-orange) 60%, var(--ink));/* chữ phụ: cam phai */
+  --accent: #b25781;     /* nút chính, thanh nhạc: Bashful Pink */
+  --accent-2: #e79d56;   /* ruy băng, nút gửi thư: Faded Orange */
+  --gold: color-mix(in srgb, var(--faded-orange) 85%, var(--leather)); /* khung kẻ: cam dịu */
+  --on-accent: #fff3e6;  /* chữ trên nút hồng */
+  --on-accent-2: #1b2d3a;/* chữ trên nút cam: xanh đậm (giống ảnh mẫu) */
+  --on-leather: var(--ink);
+  --cover: color-mix(in srgb, var(--leather) 45%, var(--glow));
+  --overlay: rgba(11, 20, 26, 0.72);
+  --paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 0.85  0 0 0 0 0.7  0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  color-scheme: dark;
+}
 
   /* ---------- 2. THÔNG TIN CÁ NHÂN ---------- */
   name: "Bích Huệ",                          // Tên hiển thị
