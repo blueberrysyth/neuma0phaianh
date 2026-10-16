@@ -352,7 +352,6 @@ body.has-bg .bg .photo { opacity: 0.35; }
 .socials a .icon { width: 22px; height: 22px; }
 .socials a:hover { background: var(--accent); color: var(--on-accent); border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25); }
 .socials a:active { transform: none; }
-
 /* ============================================================
  *  MUSIC PLAYER
  * ============================================================ */
@@ -511,7 +510,6 @@ body.has-bg .bg .photo { opacity: 0.35; }
 .eq span:nth-child(2) { animation-delay: 0.2s; }
 .eq span:nth-child(3) { animation-delay: 0.45s; }
 @keyframes eq { 0%, 100% { transform: scaleY(0.3); } 50% { transform: scaleY(1); } }
-
 /* ============================================================
  *  NÚT
  * ============================================================ */
