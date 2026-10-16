@@ -899,108 +899,169 @@ textarea.field { resize: vertical; min-height: 130px; line-height: 1.6; }
  *  Có hiệu ứng chữ + hoạt họa nhẹ. Đặt ở CUỐI style.css.
  * ============================================================ */
 
-/* ---------- CHẾ ĐỘ SÁNG ---------- */
+/* ---------- CHẾ ĐỘ SÁNG: ombre đỏ · tím · vàng · olive · xanh Cosmos ---------- */
 :root[data-theme="light"] {
-  --leather: #74a5be;      /* nền trang: Cosmos Marble */
+  --leather: #74a5be;
   --glow: #9cc3d6;
-  --paper: #fbe9c0;        /* giấy kem */
-  --paper-2: #f0cf8d;      /* ô nhập, mép giấy: mustard nhạt */
-  --ink: #4a1410;          /* chữ: đỏ nâu đậm */
-  --muted: #6a3b26;
-  --accent: #a93028;       /* nút chính: Starry Sky */
-  --accent-2: #4e5b0a;     /* ruy băng, nút gửi thư: Olive */
-  --gold: #c07f1c;         /* khung kẻ: mustard đậm */
+  --paper: #fbe9c0;
+  --paper-2: #e9d1e1;
+  --ink: #3a1a2e;
+  --muted: #6b4a63;
+  --accent: #a93028;
+  --accent-2: #3a2d71;
+  --gold: #8a6cc0;
   --on-accent: #fff1d6;
-  --on-accent-2: #f2b95e;
-  --on-leather: #750608;   /* chữ chân trang: Cherry Red */
-  --cover: #a93028;        /* bìa sách: đỏ */
-  --overlay: rgba(74, 20, 16, 0.62);
-  --gold-soft: rgba(242, 185, 94, 0.55);
-  --gold-faint: rgba(242, 185, 94, 0.28);
+  --on-accent-2: #f6d60d;
+  --on-leather: #750608;
+  --cover: #a93028;
+  --overlay: rgba(58, 45, 113, 0.6);
+  --gold-soft: rgba(138, 108, 192, 0.45);
+  --gold-faint: rgba(138, 108, 192, 0.22);
   --accent-soft: rgba(169, 48, 40, 0.14);
-  --check-a: #87a89a;      /* ca-rô: Blue Haze */
-  --check-b: #f2b95e;      /* ca-rô: Mojave Moon */
+  --check-a: #87a89a;
+  --check-b: #f6d60d;
   color-scheme: light;
 }
 :root[data-theme="light"] .bg .lamp {
   background:
-    radial-gradient(ellipse 45% 55% at 8% 58%, rgba(135, 168, 154, 0.75), transparent 72%),
-    radial-gradient(ellipse 45% 55% at 94% 30%, rgba(135, 168, 154, 0.6), transparent 72%),
-    radial-gradient(ellipse 60% 40% at 15% 0%, rgba(255, 241, 214, 0.5), transparent 75%),
-    radial-gradient(ellipse 50% 40% at 90% 100%, rgba(242, 185, 94, 0.5), transparent 75%);
+    radial-gradient(ellipse 45% 50% at 8% 55%, rgba(160, 138, 192, 0.45), transparent 72%),
+    radial-gradient(ellipse 45% 50% at 94% 28%, rgba(233, 209, 225, 0.55), transparent 72%),
+    linear-gradient(180deg, #5f8fb2 0%, #74a5be 45%, #a8c9c4 80%, #f3dfae 100%);
   opacity: 1;
 }
 :root[data-theme="light"] .bg .vignette {
-  background: radial-gradient(ellipse 85% 85% at 50% 48%, transparent 55%, rgba(74, 20, 16, 0.18) 100%);
+  background: radial-gradient(ellipse 85% 85% at 50% 48%, transparent 55%, rgba(58, 45, 113, 0.2) 100%);
 }
-:root[data-theme="light"] .player { background: #bfd3c6; }
-:root[data-theme="light"] .theme-toggle { background: #f2b95e; color: #a93028; border-color: #fbe9c0; }
-
-/* chữ tên: kiểu biển hiệu retro, bóng 3 lớp như poster */
+:root[data-theme="light"] .bg::after { box-shadow: inset 0 3px 0 #3a2d71; }
+:root[data-theme="light"] .card {
+  background-color: #a93028;
+  background-image: var(--leather-grain), linear-gradient(165deg, #d4483a 0%, #a93028 50%, #6e1a1c 100%);
+  border: 1px solid rgba(246, 214, 13, 0.55);
+  box-shadow: 0 24px 60px rgba(58, 45, 113, 0.4);
+}
+:root[data-theme="light"] .sheet {
+  background:
+    radial-gradient(ellipse 60% 40% at 0% 0%, rgba(233, 209, 225, 0.7), transparent 70%),
+    linear-gradient(180deg, #fdf0cc 0%, #fbe9c0 55%, #f1cfd0 100%);
+}
+:root[data-theme="light"] .player {
+  background: linear-gradient(120deg, #f0dbe8 0%, #cdbbe6 100%);
+  border-color: #8a6cc0;
+  box-shadow: inset 0 0 0 3px #e5d4ee, inset 0 0 0 4px rgba(138, 108, 192, 0.3);
+}
+:root[data-theme="light"] .icon-btn.play { background: linear-gradient(160deg, #ffe44a, #f6d60d); color: #3a2d71; }
+:root[data-theme="light"] .btn-primary { background: #a93028; color: #fff1d6; }
+:root[data-theme="light"] .btn-primary:hover:not(:disabled) { background: #8a2620; }
+:root[data-theme="light"] .letter-btn { background: linear-gradient(160deg, #5a45b0 0%, #3a2d71 100%); color: #f6d60d; }
+:root[data-theme="light"] .letter-btn:hover:not(:disabled) { background: #5a45b0; color: #ffe44a; }
+:root[data-theme="light"] .ribbon { background: linear-gradient(180deg, #8a9a1a 0%, #4e5b0a 100%); color: #f6d60d; }
+:root[data-theme="light"] .badge { background: #8a6cc0; color: #fff1d6; }
+:root[data-theme="light"] .theme-toggle { background: #f6d60d; color: #a93028; border-color: #fbe9c0; }
+:root[data-theme="light"] .frame i { color: #8a6cc0; }
+:root[data-theme="light"] .avatar-wrap::before { border-color: #a93028; }
+:root[data-theme="light"] .welcome-box .greeting { color: #3a2d71; }
+:root[data-theme="light"] .avatar-wrap img,
+:root[data-theme="light"] .welcome-gif { filter: none; }
+/* chữ nút Trang trước / Trang sau nằm trên bìa đỏ nên dùng màu kem */
+:root[data-theme="light"] .book-nav,
+:root[data-theme="light"] .book-nav-btn { color: #fff1d6; }
+:root[data-theme="light"] .book-nav-ind::before,
+:root[data-theme="light"] .book-nav-ind::after { color: #f6d60d; }
+:root[data-theme="light"] .socials a:nth-child(4n+1):hover { background: #a93028; border-color: #a93028; color: #fff1d6; }
+:root[data-theme="light"] .socials a:nth-child(4n+2):hover { background: #3a2d71; border-color: #3a2d71; color: #f6d60d; }
+:root[data-theme="light"] .socials a:nth-child(4n+3):hover { background: #4e5b0a; border-color: #4e5b0a; color: #f6d60d; }
+:root[data-theme="light"] .socials a:nth-child(4n):hover { background: #f6d60d; border-color: #f6d60d; color: #3a2d71; }
 :root[data-theme="light"] .name {
-  color: var(--accent);
-  text-shadow: 2px 2px 0 #fbe9c0, 4px 4px 0 #f2b95e, 6px 6px 0 #87a89a;
+  color: #a93028;
   animation: retro-pop 3.2s ease-in-out infinite;
 }
-:root[data-theme="light"] .welcome-box h2 {
-  color: var(--accent);
-  text-shadow: 2px 2px 0 #f2b95e, 4px 4px 0 #87a89a;
-}
+:root[data-theme="light"] .welcome-box h2 { color: #a93028; text-shadow: 2px 2px 0 #f6d60d, 4px 4px 0 #8a6cc0; }
 @keyframes retro-pop {
-  0%, 100% { text-shadow: 2px 2px 0 #fbe9c0, 4px 4px 0 #f2b95e, 6px 6px 0 #87a89a; }
-  50%      { text-shadow: 3px 3px 0 #fbe9c0, 6px 6px 0 #f2b95e, 9px 9px 0 #87a89a; }
+  0%, 100% { text-shadow: 2px 2px 0 #f6d60d, 4px 4px 0 #8a6cc0, 6px 6px 0 #74a5be, 0 0 14px rgba(246, 214, 13, 0.55); }
+  50%      { text-shadow: 3px 3px 0 #f6d60d, 6px 6px 0 #8a6cc0, 9px 9px 0 #74a5be, 0 0 24px rgba(246, 214, 13, 0.85); }
 }
-:root[data-theme="light"] .bg::after { box-shadow: inset 0 3px 0 #fbe9c0; }
 
-/* ---------- CHẾ ĐỘ TỐI ---------- */
+/* ---------- CHẾ ĐỘ TỐI: Japan Fish ombre (navy · cam đỏ · vàng · mint · xanh xám) ---------- */
 :root[data-theme="dark"] {
-  --leather: #1a1238;
-  --glow: #3a2d71;
-  --paper: #3a2d71;        /* Royal Blue */
-  --paper-2: #2b2160;
-  --ink: #f3e3ec;          /* Tea Pink sáng */
-  --muted: #bba9d8;        /* Baby Pink sáng */
-  --accent: #f6d60d;       /* Yellow */
-  --accent-2: #a08ac0;     /* Baby Pink */
-  --gold: #f6d60d;
-  --on-accent: #2a1f5c;
-  --on-accent-2: #1a1238;
-  --on-leather: #e9d1e1;
-  --cover: #251c55;
-  --overlay: rgba(14, 9, 34, 0.8);
-  --gold-soft: rgba(246, 214, 13, 0.4);
-  --gold-faint: rgba(246, 214, 13, 0.18);
-  --accent-soft: rgba(246, 214, 13, 0.16);
-  --check-a: #3a2d71;
-  --check-b: #a08ac0;
+  --leather: #00012a;
+  --glow: #0b2547;
+  --paper: #0d2547;
+  --paper-2: #12345a;
+  --ink: #fdebc8;
+  --muted: #a0cbad;
+  --accent: #fcc560;
+  --accent-2: #d53302;
+  --gold: #a0cbad;
+  --on-accent: #00012a;
+  --on-accent-2: #fff1d6;
+  --on-leather: #fdebc8;
+  --cover: #12345a;
+  --overlay: rgba(0, 1, 42, 0.8);
+  --gold-soft: rgba(160, 203, 173, 0.42);
+  --gold-faint: rgba(160, 203, 173, 0.2);
+  --accent-soft: rgba(252, 197, 96, 0.16);
+  --check-a: #d53302;
+  --check-b: #fcc560;
   color-scheme: dark;
 }
 :root[data-theme="dark"] .bg .lamp {
   background:
-    radial-gradient(ellipse 55% 45% at 60% 15%, rgba(160, 138, 192, 0.38), transparent 75%),
-    radial-gradient(ellipse 40% 40% at 10% 85%, rgba(246, 214, 13, 0.12), transparent 75%),
-    linear-gradient(145deg, #140d2e 10%, #1a1238 55%, #0f0a24 100%);
+    radial-gradient(ellipse 50% 40% at 85% 12%, rgba(160, 203, 173, 0.22), transparent 72%),
+    radial-gradient(ellipse 60% 25% at 50% 100%, rgba(213, 51, 2, 0.35), transparent 75%),
+    linear-gradient(180deg, #00012a 0%, #0b2547 50%, #2d5a6e 85%, #5e8f95 100%);
   opacity: 1;
 }
-:root[data-theme="dark"] .theme-toggle { background: #f6d60d; color: #2a1f5c; border-color: #e9d1e1; }
-:root[data-theme="dark"] .bg::after { box-shadow: inset 0 2px 0 #f6d60d; }
+:root[data-theme="dark"] .card {
+  background-color: #12345a;
+  background-image: var(--leather-grain), linear-gradient(165deg, #2f5573 0%, #12345a 45%, #00012a 100%);
+  border: 1px solid rgba(252, 197, 96, 0.5);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6);
+}
+:root[data-theme="dark"] .sheet {
+  background: linear-gradient(180deg, #123560 0%, #0a1d3f 60%, #1b1636 100%);
+}
+:root[data-theme="dark"] .player {
+  background: linear-gradient(120deg, #2b6f72 0%, #1a3f63 100%);
+  border-color: #a0cbad;
+  box-shadow: inset 0 0 0 3px #1d4d68, inset 0 0 0 4px rgba(160, 203, 173, 0.3);
+}
+:root[data-theme="dark"] .player .track-artist,
+:root[data-theme="dark"] .player .times { color: #cfe6d6; }
+:root[data-theme="dark"] .icon-btn.play { background: linear-gradient(160deg, #fcc560, #f08a3a); color: #00012a; }
+:root[data-theme="dark"] .btn-primary { background: #fcc560; color: #00012a; }
+:root[data-theme="dark"] .btn-primary:hover:not(:disabled) { background: #ffd684; }
+:root[data-theme="dark"] .letter-btn,
+:root[data-theme="dark"] .ribbon {
+  background: linear-gradient(110deg, #e0480f 0%, #fcc560 100%);
+  color: #00012a;
+}
+:root[data-theme="dark"] .letter-btn:hover:not(:disabled) { background: linear-gradient(110deg, #f05a1f 0%, #ffd684 100%); color: #00012a; }
+:root[data-theme="dark"] .badge { background: #a0cbad; color: #00012a; }
+:root[data-theme="dark"] .theme-toggle { background: #fcc560; color: #00012a; border-color: #fdebc8; }
+:root[data-theme="dark"] .welcome-box .greeting { color: #a0cbad; }
+:root[data-theme="dark"] .avatar-wrap::before { border-color: #fcc560; }
+:root[data-theme="dark"] .avatar-wrap img,
+:root[data-theme="dark"] .welcome-gif { filter: none; }
+:root[data-theme="dark"] .bg::after { box-shadow: inset 0 2px 0 #a0cbad; }
+:root[data-theme="dark"] .socials a:nth-child(4n+1):hover { background: #d53302; border-color: #d53302; color: #fff1d6; }
+:root[data-theme="dark"] .socials a:nth-child(4n+2):hover { background: #fcc560; border-color: #fcc560; color: #00012a; }
+:root[data-theme="dark"] .socials a:nth-child(4n+3):hover { background: #a0cbad; border-color: #a0cbad; color: #00012a; }
+:root[data-theme="dark"] .socials a:nth-child(4n):hover { background: #8fb1be; border-color: #8fb1be; color: #00012a; }
 
-/* chữ tên: đèn neon vàng, nhấp nháy nhẹ */
+/* chữ tên: vẫn phát sáng, ánh sáng đổi dần vàng → cam đỏ → mint */
 :root[data-theme="dark"] .name {
-  color: #fff6c8;
-  text-shadow: 0 0 6px rgba(246, 214, 13, 0.7), 0 0 18px rgba(246, 214, 13, 0.45), 0 0 34px rgba(160, 138, 192, 0.5);
-  animation: neon-glow 3.6s ease-in-out infinite;
+  color: #fff4d6;
+  animation: neon-rainbow 7s ease-in-out infinite;
 }
 :root[data-theme="dark"] .welcome-box h2 {
-  color: #fff6c8;
-  text-shadow: 0 0 8px rgba(246, 214, 13, 0.6), 0 0 22px rgba(160, 138, 192, 0.5);
+  color: #fff4d6;
+  text-shadow: 0 0 8px rgba(252, 197, 96, 0.6), 0 0 22px rgba(213, 51, 2, 0.4);
 }
-@keyframes neon-glow {
-  0%, 100% { text-shadow: 0 0 6px rgba(246, 214, 13, 0.7), 0 0 18px rgba(246, 214, 13, 0.45), 0 0 34px rgba(160, 138, 192, 0.5); }
-  50%      { text-shadow: 0 0 10px rgba(246, 214, 13, 0.95), 0 0 28px rgba(246, 214, 13, 0.65), 0 0 52px rgba(160, 138, 192, 0.7); }
-  92%      { text-shadow: 0 0 4px rgba(246, 214, 13, 0.4), 0 0 10px rgba(246, 214, 13, 0.25), 0 0 20px rgba(160, 138, 192, 0.3); }
+@keyframes neon-rainbow {
+  0%, 100% { text-shadow: 0 0 6px rgba(252, 197, 96, 0.9), 0 0 18px rgba(252, 197, 96, 0.5), 0 0 34px rgba(252, 197, 96, 0.3); }
+  33%      { text-shadow: 0 0 6px rgba(240, 90, 40, 0.95), 0 0 18px rgba(213, 51, 2, 0.6), 0 0 34px rgba(213, 51, 2, 0.4); }
+  66%      { text-shadow: 0 0 6px rgba(160, 203, 173, 0.95), 0 0 18px rgba(160, 203, 173, 0.55), 0 0 34px rgba(143, 177, 190, 0.4); }
 }
-
 /* ---------- HIỆU ỨNG CHUNG (cả hai chế độ) ---------- */
 
 /* dải ca-rô chạy chậm ở đáy trang */
