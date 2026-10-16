@@ -76,7 +76,7 @@ window.SITE_CONFIG = {
   avatar: "assets/avatar.png",             // 👉 Thay bằng ảnh của bạn: để file vào public/assets/ rồi đổi tên ở đây, VD "assets/avatar.jpg"
   verified: true,                          // Tick xác minh cạnh tên
 
-  /* ---------- 3. MẠNG XÃ HỘI ----------
+  /* ---------- 3. MẠNG XÃ HỘI ----------*/
    *  icon: tên icon trong bộ Tabler Icons (nét viền). Có sẵn trong assets/icons/sprite.svg:
    *    brand-facebook, brand-instagram, brand-linkedin, brand-github, brand-tiktok, brand-telegram,
    *    brand-x, brand-twitter, brand-threads, brand-youtube, brand-discord, brand-spotify, brand-twitch,
