@@ -16,54 +16,168 @@
   --faded-orange: #e79d56;   /* tối: cam phai */
   --bashful-pink: #b25781;   /* tối: hồng e thẹn */
 
-  /* ----- CHẾ ĐỘ SÁNG: Butterscotch / Rose Madder / Light Navy Blue ----- */
-  --leather: #1f6590;    /* nền trang web: Light Navy Blue */
-  --glow: color-mix(in srgb, var(--light-navy) 70%, white); /* ánh sáng hắt lên nền */
-  --paper: color-mix(in srgb, var(--butterscotch) 55%, white); /* trang giấy: bơ nhạt */
-  --paper-2: #fcb34f;    /* ô player, ô nhập: Butterscotch */
-  --ink: color-mix(in srgb, var(--light-navy) 50%, black);     /* chữ: navy đậm, dễ đọc trên nền bơ */
-  --muted: #1f6590;      /* chữ phụ: Light Navy Blue */
-  --accent: #e62a34;     /* nút chính, thanh nhạc: Rose Madder */
-  --accent-2: #1f6590;   /* ruy băng, nút gửi thư: Light Navy Blue */
-  --gold: color-mix(in srgb, var(--butterscotch) 55%, var(--rose-madder)); /* khung kẻ, hoa văn: cam đỏ */
-  --on-accent: #fff3dc;  /* chữ trên nút đỏ */
-  --on-accent-2: #fcb34f;/* chữ trên nút navy: Butterscotch */
-  --on-leather: var(--butterscotch); /* chữ đặt thẳng trên nền navy (chân trang) */
-
-  /* màu pha tự tính */
-  --cover: color-mix(in srgb, var(--leather) 58%, var(--glow));          /* bìa sách */
-  --gold-soft: color-mix(in srgb, var(--gold) 55%, transparent);
-  --gold-faint: color-mix(in srgb, var(--gold) 28%, transparent);
-  --ink-10: color-mix(in srgb, var(--ink) 10%, transparent);
-  --ink-20: color-mix(in srgb, var(--ink) 20%, transparent);
-  --accent-soft: color-mix(in srgb, var(--accent) 16%, transparent);
-  --overlay: color-mix(in srgb, var(--leather) 72%, transparent);
-  --paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.12  0 0 0 0 0.25  0 0 0 0 0.35  0 0 0 0.12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  --leather-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 0.8  0 0 0 0 0.5  0 0 0 0.11 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  /* ---------- CHẾ ĐỘ SÁNG: ombre đỏ · tím · vàng · olive · xanh Cosmos ---------- */
+:root[data-theme="light"] {
+  --leather: #74a5be;
+  --glow: #9cc3d6;
+  --paper: #fbe9c0;
+  --paper-2: #e9d1e1;
+  --ink: #3a1a2e;
+  --muted: #6b4a63;
+  --accent: #a93028;
+  --accent-2: #3a2d71;
+  --gold: #8a6cc0;
+  --on-accent: #fff1d6;
+  --on-accent-2: #f6d60d;
+  --on-leather: #750608;
+  --cover: #a93028;
+  --overlay: rgba(58, 45, 113, 0.6);
+  --gold-soft: rgba(138, 108, 192, 0.45);
+  --gold-faint: rgba(138, 108, 192, 0.22);
+  --accent-soft: rgba(169, 48, 40, 0.14);
+  --check-a: #87a89a;
+  --check-b: #f6d60d;
   color-scheme: light;
-
-  --font-display: "Playfair Display", "DejaVu Serif", Georgia, "Times New Roman", serif;
-  --font-body: "Lora", "DejaVu Serif", Georgia, "Times New Roman", serif;
+}
+:root[data-theme="light"] .bg .lamp {
+  background:
+    radial-gradient(ellipse 45% 50% at 8% 55%, rgba(160, 138, 192, 0.45), transparent 72%),
+    radial-gradient(ellipse 45% 50% at 94% 28%, rgba(233, 209, 225, 0.55), transparent 72%),
+    linear-gradient(180deg, #5f8fb2 0%, #74a5be 45%, #a8c9c4 80%, #f3dfae 100%);
+  opacity: 1;
+}
+:root[data-theme="light"] .bg .vignette {
+  background: radial-gradient(ellipse 85% 85% at 50% 48%, transparent 55%, rgba(58, 45, 113, 0.2) 100%);
+}
+:root[data-theme="light"] .bg::after { box-shadow: inset 0 3px 0 #3a2d71; }
+:root[data-theme="light"] .card {
+  background-color: #a93028;
+  background-image: var(--leather-grain), linear-gradient(165deg, #d4483a 0%, #a93028 50%, #6e1a1c 100%);
+  border: 1px solid rgba(246, 214, 13, 0.55);
+  box-shadow: 0 24px 60px rgba(58, 45, 113, 0.4);
+}
+:root[data-theme="light"] .sheet {
+  background:
+    radial-gradient(ellipse 60% 40% at 0% 0%, rgba(233, 209, 225, 0.7), transparent 70%),
+    linear-gradient(180deg, #fdf0cc 0%, #fbe9c0 55%, #f1cfd0 100%);
+}
+:root[data-theme="light"] .player {
+  background: linear-gradient(120deg, #f0dbe8 0%, #cdbbe6 100%);
+  border-color: #8a6cc0;
+  box-shadow: inset 0 0 0 3px #e5d4ee, inset 0 0 0 4px rgba(138, 108, 192, 0.3);
+}
+:root[data-theme="light"] .icon-btn.play { background: linear-gradient(160deg, #ffe44a, #f6d60d); color: #3a2d71; }
+:root[data-theme="light"] .btn-primary { background: #a93028; color: #fff1d6; }
+:root[data-theme="light"] .btn-primary:hover:not(:disabled) { background: #8a2620; }
+:root[data-theme="light"] .letter-btn { background: linear-gradient(160deg, #5a45b0 0%, #3a2d71 100%); color: #f6d60d; }
+:root[data-theme="light"] .letter-btn:hover:not(:disabled) { background: #5a45b0; color: #ffe44a; }
+:root[data-theme="light"] .ribbon { background: linear-gradient(180deg, #8a9a1a 0%, #4e5b0a 100%); color: #f6d60d; }
+:root[data-theme="light"] .badge { background: #8a6cc0; color: #fff1d6; }
+:root[data-theme="light"] .theme-toggle { background: #f6d60d; color: #a93028; border-color: #fbe9c0; }
+:root[data-theme="light"] .frame i { color: #8a6cc0; }
+:root[data-theme="light"] .avatar-wrap::before { border-color: #a93028; }
+:root[data-theme="light"] .welcome-box .greeting { color: #3a2d71; }
+:root[data-theme="light"] .avatar-wrap img,
+:root[data-theme="light"] .welcome-gif { filter: none; }
+/* chữ nút Trang trước / Trang sau nằm trên bìa đỏ nên dùng màu kem */
+:root[data-theme="light"] .book-nav,
+:root[data-theme="light"] .book-nav-btn { color: #fff1d6; }
+:root[data-theme="light"] .book-nav-ind::before,
+:root[data-theme="light"] .book-nav-ind::after { color: #f6d60d; }
+:root[data-theme="light"] .socials a:nth-child(4n+1):hover { background: #a93028; border-color: #a93028; color: #fff1d6; }
+:root[data-theme="light"] .socials a:nth-child(4n+2):hover { background: #3a2d71; border-color: #3a2d71; color: #f6d60d; }
+:root[data-theme="light"] .socials a:nth-child(4n+3):hover { background: #4e5b0a; border-color: #4e5b0a; color: #f6d60d; }
+:root[data-theme="light"] .socials a:nth-child(4n):hover { background: #f6d60d; border-color: #f6d60d; color: #3a2d71; }
+:root[data-theme="light"] .name {
+  color: #a93028;
+  animation: retro-pop 3.2s ease-in-out infinite;
+}
+:root[data-theme="light"] .welcome-box h2 { color: #a93028; text-shadow: 2px 2px 0 #f6d60d, 4px 4px 0 #8a6cc0; }
+@keyframes retro-pop {
+  0%, 100% { text-shadow: 2px 2px 0 #f6d60d, 4px 4px 0 #8a6cc0, 6px 6px 0 #74a5be, 0 0 14px rgba(246, 214, 13, 0.55); }
+  50%      { text-shadow: 3px 3px 0 #f6d60d, 6px 6px 0 #8a6cc0, 9px 9px 0 #74a5be, 0 0 24px rgba(246, 214, 13, 0.85); }
 }
 
-/* ----- CHẾ ĐỘ TỐI: Dark Grey Blue / Faded Orange / Bashful Pink ----- */
+/* ---------- CHẾ ĐỘ TỐI: Japan Fish ombre (navy · cam đỏ · vàng · mint · xanh xám) ---------- */
 :root[data-theme="dark"] {
-  --leather: color-mix(in srgb, var(--dark-grey-blue) 45%, black); /* nền: xanh xám rất đậm */
-  --glow: #305166;       /* ánh sáng hắt lên: Dark Grey Blue */
-  --paper: color-mix(in srgb, var(--dark-grey-blue) 72%, black);   /* trang giấy: xanh than */
-  --paper-2: #305166;    /* ô player, ô nhập: Dark Grey Blue */
-  --ink: color-mix(in srgb, var(--faded-orange) 70%, white);       /* chữ: cam nhạt, dễ đọc */
-  --muted: color-mix(in srgb, var(--faded-orange) 60%, var(--ink));/* chữ phụ: cam phai */
-  --accent: #b25781;     /* nút chính, thanh nhạc: Bashful Pink */
-  --accent-2: #e79d56;   /* ruy băng, nút gửi thư: Faded Orange */
-  --gold: color-mix(in srgb, var(--faded-orange) 85%, var(--leather)); /* khung kẻ: cam dịu */
-  --on-accent: #fff3e6;  /* chữ trên nút hồng */
-  --on-accent-2: #1b2d3a;/* chữ trên nút cam: xanh đậm (giống ảnh mẫu) */
-  --on-leather: var(--ink);
-  --cover: color-mix(in srgb, var(--leather) 45%, var(--glow));
-  --overlay: rgba(11, 20, 26, 0.72);
-  --paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 0.85  0 0 0 0 0.7  0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --leather: #00012a;
+  --glow: #0b2547;
+  --paper: #0d2547;
+  --paper-2: #12345a;
+  --ink: #fdebc8;
+  --muted: #a0cbad;
+  --accent: #fcc560;
+  --accent-2: #d53302;
+  --gold: #a0cbad;
+  --on-accent: #00012a;
+  --on-accent-2: #fff1d6;
+  --on-leather: #fdebc8;
+  --cover: #12345a;
+  --overlay: rgba(0, 1, 42, 0.8);
+  --gold-soft: rgba(160, 203, 173, 0.42);
+  --gold-faint: rgba(160, 203, 173, 0.2);
+  --accent-soft: rgba(252, 197, 96, 0.16);
+  --check-a: #d53302;
+  --check-b: #fcc560;
   color-scheme: dark;
+}
+:root[data-theme="dark"] .bg .lamp {
+  background:
+    radial-gradient(ellipse 50% 40% at 85% 12%, rgba(160, 203, 173, 0.22), transparent 72%),
+    radial-gradient(ellipse 60% 25% at 50% 100%, rgba(213, 51, 2, 0.35), transparent 75%),
+    linear-gradient(180deg, #00012a 0%, #0b2547 50%, #2d5a6e 85%, #5e8f95 100%);
+  opacity: 1;
+}
+:root[data-theme="dark"] .card {
+  background-color: #12345a;
+  background-image: var(--leather-grain), linear-gradient(165deg, #2f5573 0%, #12345a 45%, #00012a 100%);
+  border: 1px solid rgba(252, 197, 96, 0.5);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6);
+}
+:root[data-theme="dark"] .sheet {
+  background: linear-gradient(180deg, #123560 0%, #0a1d3f 60%, #1b1636 100%);
+}
+:root[data-theme="dark"] .player {
+  background: linear-gradient(120deg, #2b6f72 0%, #1a3f63 100%);
+  border-color: #a0cbad;
+  box-shadow: inset 0 0 0 3px #1d4d68, inset 0 0 0 4px rgba(160, 203, 173, 0.3);
+}
+:root[data-theme="dark"] .player .track-artist,
+:root[data-theme="dark"] .player .times { color: #cfe6d6; }
+:root[data-theme="dark"] .icon-btn.play { background: linear-gradient(160deg, #fcc560, #f08a3a); color: #00012a; }
+:root[data-theme="dark"] .btn-primary { background: #fcc560; color: #00012a; }
+:root[data-theme="dark"] .btn-primary:hover:not(:disabled) { background: #ffd684; }
+:root[data-theme="dark"] .letter-btn,
+:root[data-theme="dark"] .ribbon {
+  background: linear-gradient(110deg, #e0480f 0%, #fcc560 100%);
+  color: #00012a;
+}
+:root[data-theme="dark"] .letter-btn:hover:not(:disabled) { background: linear-gradient(110deg, #f05a1f 0%, #ffd684 100%); color: #00012a; }
+:root[data-theme="dark"] .badge { background: #a0cbad; color: #00012a; }
+:root[data-theme="dark"] .theme-toggle { background: #fcc560; color: #00012a; border-color: #fdebc8; }
+:root[data-theme="dark"] .welcome-box .greeting { color: #a0cbad; }
+:root[data-theme="dark"] .avatar-wrap::before { border-color: #fcc560; }
+:root[data-theme="dark"] .avatar-wrap img,
+:root[data-theme="dark"] .welcome-gif { filter: none; }
+:root[data-theme="dark"] .bg::after { box-shadow: inset 0 2px 0 #a0cbad; }
+:root[data-theme="dark"] .socials a:nth-child(4n+1):hover { background: #d53302; border-color: #d53302; color: #fff1d6; }
+:root[data-theme="dark"] .socials a:nth-child(4n+2):hover { background: #fcc560; border-color: #fcc560; color: #00012a; }
+:root[data-theme="dark"] .socials a:nth-child(4n+3):hover { background: #a0cbad; border-color: #a0cbad; color: #00012a; }
+:root[data-theme="dark"] .socials a:nth-child(4n):hover { background: #8fb1be; border-color: #8fb1be; color: #00012a; }
+
+/* chữ tên: vẫn phát sáng, ánh sáng đổi dần vàng → cam đỏ → mint */
+:root[data-theme="dark"] .name {
+  color: #fff4d6;
+  animation: neon-rainbow 7s ease-in-out infinite;
+}
+:root[data-theme="dark"] .welcome-box h2 {
+  color: #fff4d6;
+  text-shadow: 0 0 8px rgba(252, 197, 96, 0.6), 0 0 22px rgba(213, 51, 2, 0.4);
+}
+@keyframes neon-rainbow {
+  0%, 100% { text-shadow: 0 0 6px rgba(252, 197, 96, 0.9), 0 0 18px rgba(252, 197, 96, 0.5), 0 0 34px rgba(252, 197, 96, 0.3); }
+  33%      { text-shadow: 0 0 6px rgba(240, 90, 40, 0.95), 0 0 18px rgba(213, 51, 2, 0.6), 0 0 34px rgba(213, 51, 2, 0.4); }
+  66%      { text-shadow: 0 0 6px rgba(160, 203, 173, 0.95), 0 0 18px rgba(160, 203, 173, 0.55), 0 0 34px rgba(143, 177, 190, 0.4); }
 }
 /* ============================================================
  *  CƠ BẢN
