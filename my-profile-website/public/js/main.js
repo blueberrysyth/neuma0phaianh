@@ -176,13 +176,13 @@
 
   /* ============================================================
    *  3. POPUP CHÀO MỪNG
-   * ============================================================ */
+   * ============================================================ 
   function timeGreeting(g = {}) {
     const h = new Date().getHours();
-    if (h >= 5 && h < 11) return g.morning || "Chào buổi sáng";
-    if (h >= 11 && h < 14) return g.noon || "Chào buổi trưa";
-    if (h >= 14 && h < 18) return g.afternoon || "Chào buổi chiều";
-    if (h >= 18 && h < 23) return g.evening || "Chào buổi tối";
+    if (h >= 5 && h < 11) return g.morning || "chào buổi sáng nho";
+    if (h >= 11 && h < 14) return g.noon || "Ăn gì chưaaaa";
+    if (h >= 14 && h < 18) return g.afternoon || "Chiều rồi đấyyyy";
+    if (h >= 18 && h < 23) return g.evening || "Tối iu thương, hạnh fuk";
     return g.night || "Khuya rồi, nhớ nghỉ ngơi sớm nhé";
   }
 
@@ -210,7 +210,7 @@
     } else {
       $(".welcome-gif-wrap").remove();
     }
-    $("#welcomeTitle").textContent = w.title || "Chào mừng bạn!";
+    $("#welcomeTitle").textContent = w.title || "quéo quèo queo";
     $("#welcomeGreeting").textContent = timeGreeting(w.greetings);
     $("#welcomeWish").textContent = pick(w.wishes) || "Chúc bạn một ngày tốt lành!";
     const ok = $("#welcomeOk");
