@@ -245,8 +245,19 @@ window.Mascot = (() => {
         '<g class="m-arm m-arm-r"><rect class="m-px" x="26" y="8" width="4" height="4"/><rect class="m-sh" x="26" y="11" width="4" height="1"/></g>' +
         '<g class="m-arm m-arm-lu"><rect class="m-px" x="1" y="1" width="3" height="3"/><rect class="m-px" x="1" y="-3" width="2" height="4"/></g>' +
         '<g class="m-arm m-arm-ru"><rect class="m-px" x="26" y="1" width="3" height="3"/><rect class="m-px" x="27" y="-3" width="2" height="4"/></g>' +
-        '<g class="m-torso"><rect class="m-px" x="4" y="0" width="22" height="16"/><rect class="m-sh" x="4" y="14" width="22" height="2"/></g>' +
-        '<g class="m-eyes">' +
+'<g class="m-torso">' +
+  '<rect class="m-px" x="4" y="0" width="22" height="16"/>' +
+  '<rect class="m-sh" x="4" y="14" width="22" height="2"/>' +
+  '<rect class="m-px" x="5" y="-1" width="4" height="1"/><rect class="m-px" x="5" y="-2" width="3" height="1"/><rect class="m-px" x="5" y="-3" width="2" height="1"/>' +
+  '<rect class="m-px" x="21" y="-1" width="4" height="1"/><rect class="m-px" x="22" y="-2" width="3" height="1"/><rect class="m-px" x="23" y="-3" width="2" height="1"/>' +
+  '<rect class="m-sh" x="6" y="-1" width="2" height="1"/><rect class="m-sh" x="22" y="-1" width="2" height="1"/>' +
+  '<rect class="m-sh" x="12" y="0" width="1" height="2"/><rect class="m-sh" x="14" y="0" width="2" height="3"/><rect class="m-sh" x="17" y="0" width="1" height="2"/>' +
+  '<rect class="m-ink" x="14" y="8" width="2" height="1"/>' +
+  '<rect class="m-ink" x="13" y="9" width="1" height="1"/><rect class="m-ink" x="16" y="9" width="1" height="1"/><rect class="m-ink" x="14" y="10" width="2" height="1"/>' +
+  '<rect class="m-ink" x="5" y="9" width="3" height="1"/><rect class="m-ink" x="5" y="11" width="3" height="1"/>' +
+  '<rect class="m-ink" x="22" y="9" width="3" height="1"/><rect class="m-ink" x="22" y="11" width="3" height="1"/>' +
+'</g>' +        
+    '<g class="m-eyes">' +
           Object.entries(EYES).map(([k, v]) => `<g class="m-eye-${k}">${v}</g>`).join("") +
         '</g>' +
       '</g></g>' +
