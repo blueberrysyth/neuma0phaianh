@@ -277,7 +277,18 @@ window.Mascot = (() => {
    *  3. TẠO LINH VẬT
    * ============================================================ */
   const cleanText = (v, max) => (typeof v === "string" ? Array.from(v.replace(/\s+/g, " ").trim()).slice(0, max).join("") : "");
-
+  /* Đếm số lần ghé: mỗi phiên trình duyệt chỉ tính 1 lần (tải lại trang không tăng) */
+  function countVisit() {
+    try {
+      let n = parseInt(localStorage.getItem("visit-count") || "0", 10) || 0;
+      if (sessionStorage.getItem("visit-counted") !== "1") {
+        n += 1;
+        localStorage.setItem("visit-count", String(n));
+        sessionStorage.setItem("visit-counted", "1");
+      }
+      return n;
+    } catch { return 0; }
+  }
   function noopApi() {
     return { say() {}, act() { return false; }, destroy() {}, el: null };
   }
@@ -301,6 +312,15 @@ window.Mascot = (() => {
 
     const fmt = (s) => String(s || "").split("{name}").join(name);
     const lineFor = (kind) => fmt(pick(LINES[kind]));
+        const visits = countVisit();
+    const visitLine = () => fmt(
+      visits <= 1 ? "Chào bạn mới! Tớ là {name} nè." :
+      visits === 2 ? "Bạn quay lại rồi! Vui ghê." :
+      visits < 5 ? "Lại gặp bạn nữa rồi nè!" :
+      visits === 5 ? "Bạn ghé nhiều ghê, nhớ nha!" :
+      visits < 10 ? "Bạn là khách quen của {name} rồi đó!" :
+      "Lần thứ " + visits + " bạn ghé rồi, {name} nhớ bạn lắm!"
+    );
     const actLine = (kind) => {
       if (kind !== "sleep" && kind !== "hop" && Math.random() < 0.45) return fmt(pick(messages.length ? messages : DEFAULT_MESSAGES));
       return lineFor(kind);
@@ -730,7 +750,7 @@ window.Mascot = (() => {
       let line = "";
       if (greetPending) {
         greetPending = false;
-        line = lineFor("greet");
+        line = visitLine();      
       } else if (!quiet && flung) {
         if (impact > PHYS.dizzyAt) { tempFace("dizzy", 1400); if (Math.random() < 0.7) line = lineFor("dizzy"); }
         else if (Math.random() < 0.3) line = lineFor("land");
@@ -1235,7 +1255,7 @@ window.Mascot = (() => {
           root.classList.add("is-appearing");
           T("appear", () => root.classList.remove("is-appearing"), 600);
         }
-        if (!pendingSay && Math.random() < 0.45) T("greet", () => say(lineFor("back")), 600);
+        if (!pendingSay) T("greet", () => say(visitLine()), 600);
       } else {
         // lần đầu: rơi từ trên xuống mép trên cuốn sách, gần bên phải
         greetPending = true;
