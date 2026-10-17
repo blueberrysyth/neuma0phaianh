@@ -252,8 +252,8 @@ window.Mascot = (() => {
   '<rect class="m-px" x="21" y="-1" width="4" height="1"/><rect class="m-px" x="22" y="-2" width="3" height="1"/><rect class="m-px" x="23" y="-3" width="2" height="1"/>' +
   '<rect class="m-sh" x="6" y="-1" width="2" height="1"/><rect class="m-sh" x="22" y="-1" width="2" height="1"/>' +
   '<rect class="m-sh" x="12" y="0" width="1" height="2"/><rect class="m-sh" x="14" y="0" width="2" height="3"/><rect class="m-sh" x="17" y="0" width="1" height="2"/>' +
-  '<rect class="m-ink" x="14" y="8" width="2" height="1"/>' +
-  '<rect class="m-ink" x="13" y="9" width="1" height="1"/><rect class="m-ink" x="16" y="9" width="1" height="1"/><rect class="m-ink" x="14" y="10" width="2" height="1"/>' +
+     '<rect class="m-ink" x="10" y="9" width="1" height="1"/><rect class="m-ink" x="14" y="9" width="2" height="1"/><rect class="m-ink" x="19" y="9" width="1" height="1"/>' +
+   '<rect class="m-ink" x="11" y="10" width="3" height="1"/><rect class="m-ink" x="16" y="10" width="3" height="1"/>' +
   '<rect class="m-ink" x="5" y="9" width="3" height="1"/><rect class="m-ink" x="5" y="11" width="3" height="1"/>' +
   '<rect class="m-ink" x="22" y="9" width="3" height="1"/><rect class="m-ink" x="22" y="11" width="3" height="1"/>' +
 '</g>' +        
