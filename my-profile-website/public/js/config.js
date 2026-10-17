@@ -14,7 +14,7 @@ window.SITE_CONFIG = {
   ribbon: "       ",                      // Chữ trên ruy băng đánh dấu trang ("" để ẩn ruy băng)
   bio: "Xin chào, mình là Lam. Cảm ơn bạn đã ghé thăm.",
   bioTypingEffect: true,                   // Hiệu ứng gõ chữ cho bio (false = hiện luôn)
-  avatar: "assets/avatar.png",             // 👉 Thay bằng ảnh của bạn: để file vào public/assets/ rồi đổi tên ở đây, VD "assets/avatar.jpg"
+  avatar: "assets/avatar.jpg",             // 👉 Thay bằng ảnh của bạn: để file vào public/assets/ rồi đổi tên ở đây, VD "assets/avatar.jpg"
   verified: true,                          // Tick xác minh cạnh tên
 
   /* ---------- 3. MẠNG XÃ HỘI ----------
