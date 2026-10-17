@@ -199,8 +199,8 @@
     }
 
     const gif = $("#welcomeGif");
-    if (w.gif) {
-      gif.src = w.gif;
+const gifSrc = w.gif || "assets/welcome.gif";
+if (gifSrc) {      gif.src = gifSrc;
       gif.onerror = () => {
         const fb = document.createElement("div");
         fb.className = "welcome-fallback";
