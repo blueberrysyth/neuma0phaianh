@@ -1171,11 +1171,12 @@ textarea.field { resize: vertical; min-height: 130px; line-height: 1.6; }
   .name, .frame i, .ribbon, .avatar-wrap::before, .bg::after, .welcome-gif-wrap,
   .theme-toggle::after, .player.playing .icon-btn.play,
   .socials a:hover, .btn:hover::after, .letter-btn:hover::after { animation: none !important; }
-   /* Ẩn thanh cuộn của popup chào mừng */
+}
+  /* Ẩn thanh cuộn của popup chào mừng */
    .modal-box {
      overflow-x: hidden !important;
      overflow-y: auto !important;
      scrollbar-width: none !important;
    }
    .modal-box::-webkit-scrollbar { display: none !important; }
-}
+
