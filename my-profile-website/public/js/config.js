@@ -28,6 +28,7 @@ window.SITE_CONFIG = {
   socials: [
     { name: "Facebook",  icon: "brand-facebook",  url: "https://www.facebook.com/bichhueowo/" },
     { name: "Instagram", icon: "brand-instagram", url: "https://www.instagram.com/w.bhue8/" },
+    { name: "Tiktok", icon: "brand-tiktok", url: "https://www.tiktok.com/@iykyk.oo/" },
   ],
 
   /* ---------- 4. POPUP CHÀO MỪNG (hiện khi mới vào trang) ---------- 
