@@ -32,7 +32,7 @@ window.SITE_CONFIG = {
 
   /* ---------- 4. POPUP CHÀO MỪNG (hiện khi mới vào trang) ---------- 
   welcome: {
-    // GIF mèo gõ laptop (link Tenor). Muốn dùng file riêng: tải gif về public/assets/ rồi đổi thành "assets/welcome.gif"
+    // GIF mèo gõ laptop (link Tenor). Muốn dùng file riêng: tải gif về public/assets/ rồi đổi thành "assets/weo.gif"
     gif: "assets/weo.gif",
     title: "Chào mừng bạn ghé thăm",
     // Lời chào theo giờ trong ngày (tự động chọn theo giờ máy người xem)
