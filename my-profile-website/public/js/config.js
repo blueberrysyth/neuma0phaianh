@@ -37,11 +37,11 @@ window.SITE_CONFIG = {
     title: "Chào mừng bạn ghé thăm",
     // Lời chào theo giờ trong ngày (tự động chọn theo giờ máy người xem)
     greetings: {
-      morning:   "Chào buổi sáng",
-      noon:      "Chào buổi trưa",
-      afternoon: "Chào buổi chiều",
-      evening:   "Chào buổi tối",
-      night:     "Đêm đã khuya, nhớ nghỉ ngơi",
+      morning:   "Buổi sáng tốt lành nhóo",
+      noon:      "Ăn gì chưaaaaa",
+      afternoon: "Chiều rồi đấyyyyyyyy",
+      evening:   "Tối iu thương, hạnh fuk",
+      night:     "Sao chưa ngủ hả???????",
     },
     // Mỗi lần vào sẽ chọn ngẫu nhiên 1 câu
     wishes: [
@@ -81,7 +81,7 @@ window.SITE_CONFIG = {
   /* ---------- 6. THƯ GỬI ADMIN ---------- */
   letter: {
     enabled: true,
-    buttonText: "Gửi thư cho tớ",
+    buttonText: "muón nói gì khon",
     title: "Thư gửi tớ",
     description: "Chỉ mình đọc được thư này. Bạn có thể để lại tên hoặc gửi ẩn danh.",
     maxLength: 1000,        // Nên trùng với MAX_MESSAGE_LENGTH trong file .env
